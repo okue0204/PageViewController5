@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PageViewController5" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HQm-2v-cJO" customClass="HeaderView" customModule="PageViewController5" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="59" width="393" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="tsn-1q-rfm"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jIs-uo-V7y">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="59"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yRH-8H-Qq5">
+                                <rect key="frame" x="6" y="109" width="319" height="24"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CUZ-0x-pm0">
+                                        <rect key="frame" x="0.0" y="0.0" width="46" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                        <inset key="contentEdgeInsets" minX="8" minY="0.0" maxX="8" maxY="4"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="最新">
+                                            <color key="titleColor" name="base_background"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dWO-RM-78p">
+                                        <rect key="frame" x="46" y="0.0" width="46" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                        <inset key="contentEdgeInsets" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="番組">
+                                            <color key="titleColor" name="base_background"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3uQ-PM-M6P">
+                                        <rect key="frame" x="92" y="0.0" width="136" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                        <inset key="contentEdgeInsets" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="ダウンロード済み">
+                                            <color key="titleColor" name="base_background"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="27F-0a-gNx">
+                                        <rect key="frame" x="228" y="0.0" width="91" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                        <inset key="contentEdgeInsets" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="再生リスト">
+                                            <color key="titleColor" name="base_background"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o0D-UW-zqQ">
+                                <rect key="frame" x="6" y="133" width="46" height="3"/>
+                                <color key="backgroundColor" name="base_background"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="3" id="eHP-ur-b2i"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tQU-0I-tJY">
+                                <rect key="frame" x="0.0" y="136" width="393" height="716"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="TEC-v9-7dc">
+                                <rect key="frame" x="130" y="692.33333333333337" width="133.33333333333337" height="25.666666666666629"/>
+                                <color key="pageIndicatorTintColor" name="base_gray"/>
+                                <color key="currentPageIndicatorTintColor" name="base_background"/>
+                            </pageControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="jIs-uo-V7y" secondAttribute="trailing" id="1Ij-ek-2he"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TEC-v9-7dc" secondAttribute="bottom" constant="100" id="6Ll-Wy-gbE"/>
+                            <constraint firstItem="o0D-UW-zqQ" firstAttribute="top" secondItem="yRH-8H-Qq5" secondAttribute="bottom" id="8I9-Se-9FY"/>
+                            <constraint firstItem="o0D-UW-zqQ" firstAttribute="width" secondItem="CUZ-0x-pm0" secondAttribute="width" id="BbZ-jW-VxG"/>
+                            <constraint firstItem="yRH-8H-Qq5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="6" id="EE1-mh-jFd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HQm-2v-cJO" secondAttribute="trailing" id="Hiy-xa-Y5G"/>
+                            <constraint firstItem="tQU-0I-tJY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="IAW-tT-q34"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tQU-0I-tJY" secondAttribute="trailing" id="IUi-fW-G9t"/>
+                            <constraint firstItem="HQm-2v-cJO" firstAttribute="top" secondItem="jIs-uo-V7y" secondAttribute="bottom" id="IqQ-mS-XVY"/>
+                            <constraint firstItem="tQU-0I-tJY" firstAttribute="top" secondItem="o0D-UW-zqQ" secondAttribute="bottom" id="KMd-ef-iU1"/>
+                            <constraint firstItem="yRH-8H-Qq5" firstAttribute="top" secondItem="HQm-2v-cJO" secondAttribute="bottom" id="ZDR-HB-j2v"/>
+                            <constraint firstItem="jIs-uo-V7y" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Zhd-NL-RHN"/>
+                            <constraint firstItem="HQm-2v-cJO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bl2-xu-6HT"/>
+                            <constraint firstItem="o0D-UW-zqQ" firstAttribute="centerX" secondItem="CUZ-0x-pm0" secondAttribute="centerX" id="gc5-Me-6ei"/>
+                            <constraint firstItem="TEC-v9-7dc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ivs-fs-gkG"/>
+                            <constraint firstItem="HQm-2v-cJO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="sLe-Uu-so2"/>
+                            <constraint firstAttribute="bottom" secondItem="tQU-0I-tJY" secondAttribute="bottom" id="suh-sI-9qy"/>
+                            <constraint firstItem="jIs-uo-V7y" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="yme-z3-tQs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="animationView" destination="o0D-UW-zqQ" id="NS0-u0-3Vz"/>
+                        <outlet property="animationViewWidthConstraint" destination="BbZ-jW-VxG" id="xdT-O1-cSN"/>
+                        <outlet property="pageContainerView" destination="tQU-0I-tJY" id="eZm-ef-9jq"/>
+                        <outlet property="pageControl" destination="TEC-v9-7dc" id="Z6B-go-jDU"/>
+                        <outlet property="stackView" destination="yRH-8H-Qq5" id="OqK-1w-nr0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135.1145038167939" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="base_background">
+            <color red="0.18799999356269836" green="0.22400000691413879" blue="0.32199999690055847" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="base_gray">
+            <color red="0.86299997568130493" green="0.86699998378753662" blue="0.88200002908706665" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
