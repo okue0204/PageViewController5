@@ -49,32 +49,6 @@ class ViewController: UIViewController {
         return windowScene.screen.bounds.width
     }
     
-    private var afterButtonCenterX: CGFloat {
-        return if viewControllers.count > currentPage + 1 {
-            stackView.arrangedSubviews.compactMap {
-                $0 as? UIButton
-            }[currentPage + 1].center.x - firstButtonCenterX
-        } else {
-            0
-        }
-    }
-    
-    private var currentButtonCenterX: CGFloat {
-        return stackView.arrangedSubviews.compactMap {
-            $0 as? UIButton
-        }[currentPage].center.x - firstButtonCenterX
-    }
-    
-    private var previousButtonCenterX: CGFloat {
-        return if 0 < currentPage - 1 {
-            stackView.arrangedSubviews.compactMap {
-                $0 as? UIButton
-            }[currentPage - 1].center.x - firstButtonCenterX
-        } else {
-            0
-        }
-    }
-    
     private var firstButtonCenterX: CGFloat {
         guard let firstButton = stackView.arrangedSubviews.first as? UIButton else {
             fatalError("")
@@ -128,10 +102,26 @@ class ViewController: UIViewController {
         }
     }
     
+    private func getButtonCenterX(at buttonIndex: ButtonPosition) -> CGFloat {
+        if buttonIndex == .after, tag == .playlist {
+            0
+        } else if buttonIndex == .previous, tag == .latest {
+            0
+        } else {
+            stackView.arrangedSubviews.map {
+                $0.center.x
+            }[currentPage + buttonIndex.rawValue] - firstButtonCenterX
+        }
+    }
+    
     private func animateViewSlide(contentOffsetX: CGFloat) {
         let afterButtonWidth = getButtonWidth(at: .after)
         let currentButtonWidth = getButtonWidth(at: .current)
         let previousButtonWidth = getButtonWidth(at: .previous)
+        
+        let afterButtonCenterX = getButtonCenterX(at: .after)
+        let currentButtonCenterX = getButtonCenterX(at: .current)
+        let previousButtonCenterX = getButtonCenterX(at: .previous)
         
         if contentOffsetX == 0 {
             return
